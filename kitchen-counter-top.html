@@ -9,25 +9,26 @@
     <link type="text/css" href="./styles.css" rel="stylesheet"/>
 
     <style>
+       <style>
         .container {
             display: flex;
             flex-direction: column; /* Stack .box divs vertically */
         }
         .box {
             display: flex;
-            align-items: left; /* Vertically center align the items */
+            align-items: flex-start; /* Align items to the start of the flex container */
             margin-bottom: 20px; /* Add some space between the products */
         }
 
         model-viewer {
-            width: 800px;
-            height: 600px;
-            margin: auto;
+            flex: 1; /* model-viewer and content div will each take half the space */
+            height: auto; /* Set height to auto to maintain aspect ratio */
         }
 
         .content {
-            flex-grow: 1;
+            flex: 1; /* model-viewer and content div will each take half the space */
             padding: 20px;
+            box-sizing: border-box; /* Include padding in the width calculation */
         }
 
         .Hotspot {
