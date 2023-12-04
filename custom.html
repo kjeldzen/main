@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+
+    <style>
+        .box {
+            display: flex;
+            
+        }
+
+        model-viewer {
+            width: 800px;
+            height: 600px;
+            margin:0, auto;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+          <ul class="nav-menu">
+             <li><a href="index.html">Home</a></li>
+              <li><a href="custom.html">Custom Kitchen Cabinet</a></li>
+              <li><a href="#">Kitchen Countertops</a></li>
+              <li><a href="#">Kitchen Doors</a></li>
+              <li><a href="#">Kitchen Island</a></li>
+          </ul>
+      </nav>
+  </header>
+
+<div class="box">
+    <model-viewer src="Kitchen_Cabinet White Model Only.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="0.44" exposure="0.66" shadow-softness="0.74">
+        <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+        </div>
+        <button slot="ar-button" id="ar-button">
+            View in your space
+        </button>
+        <div id="ar-prompt">
+            <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+        </div>
+    </model-viewer>
+          
+</div>
+
+
+<footer>
+    <p>&copy; Kitchens 2023</p>
+</footer>
+
+</body>
+
+</html>
+    

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <nav>
+          <ul class="nav-menu">
+             <li><a href="index.html">Home</a></li>
+              <li><a href="custom.html">Custom Kitchen Cabinet</a></li>
+              <li><a href="#">Kitchen Countertops</a></li>
+              <li><a href="#">Kitchen Doors</a></li>
+              <li><a href="#">Kitchen Island</a></li>
+          </ul>
+      </nav>
+  </header>
+
+  <section class="product-details">
+    <h1>White Kitchen Cabinet - ENHET Series</h1>
+    <p>
+        The ENHET Series offers a stylish and functional white kitchen cabinet solution for your home. It's not just a cabinet; it's a versatile and durable piece of furniture designed to meet your needs. Here are some key features:
+        Whether you're looking to update your kitchen or create a new one, the ENHET white kitchen cabinet provides the versatility and reliability you need. With its modern design and practical features, it's the perfect addition to any kitchen space.
+    </p>
+    <p>
+        Explore the possibilities and start building your dream kitchen with the ENHET Series today!
+    </p>
+    <button class="explore-button">Explore More</button>
+    <img src="poster.webp" style="width: auto;" >
+</section>
+
+<section>
+  <!-- <model-viewer> HTML element -->
+    <model-viewer src="Kitchen Cabinet Brown Complete with Furniture.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="0.44" exposure="0.66" shadow-softness="0.74" min-camera-orbit="auto auto 839.7m" min-field-of-view="17.6deg">
+      <button class="Hotspot" slot="hotspot-1" data-position="-50.966349156530555m 50.023535542667595m 320.47998883141116m" data-normal="0.13749475974883466m 0.00036211338788861354m 0.9905024280210043m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Counter Height Bar Stool
+              $99.99 &gt;&gt;</div>
+      </button><button class="Hotspot" slot="hotspot-2" data-position="-88.74653755152218m 138.7210570687047m 15.011280417021396m" data-normal="-0.024997354906680206m -3.2910437413687303e-8m 0.9996875173011157m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Custom Kitchen Cabinet Modular $899.99 &gt;&gt;</div>
+      </button><button class="Hotspot" slot="hotspot-3" data-position="-221.46837304592745m 68.57800297563358m 10.012188178757938m" data-normal="6.105577001624824e-11m 0.9999999999999996m 3.2922237700266564e-8m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Laminate Countertops &gt;&gt; $399.99</div>
+      </button><button class="Hotspot" slot="hotspot-4" data-position="-127.83333729646574m 47.555745580255916m 222.6081760902536m" data-normal="0.00012686207053972415m 0.9999992761513214m -0.0011964960713033636m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Kitchen Island $429.99 &gt;&gt;</div>
+      </button>
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
+</section>    
+
+    <footer>
+      <p>&copy; Kitchens 2023</p>
+  </footer>
+    
+  </body>
+
+
+
+
+</html>
