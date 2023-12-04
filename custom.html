@@ -9,15 +9,25 @@
     <link type="text/css" href="./styles.css" rel="stylesheet"/>
 
     <style>
+        .container {
+            display: flex;
+            flex-direction: column; /* Stack .box divs vertically */
+        }
         .box {
             display: flex;
-            
+            align-items: center; /* Vertically center align the items */
+            margin-bottom: 20px; /* Add some space between the products */
         }
 
         model-viewer {
             width: 800px;
             height: 600px;
-            margin:0, auto;
+            margin: 0 auto;
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 20px;
         }
     </style>
   </head>
@@ -34,19 +44,36 @@
       </nav>
   </header>
 
-<div class="box">
-    <model-viewer src="Kitchen_Cabinet White Model Only.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="0.44" exposure="0.66" shadow-softness="0.74">
-        <div class="progress-bar hide" slot="progress-bar">
-            <div class="update-bar"></div>
+<!-- Container for the first product -->
+<div class="container">
+
+    <div class="box">
+        <model-viewer src="Kitchen_Cabinet White Model Only.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="0.44" exposure="0.66" shadow-softness="0.74">
+            <!-- Model-viewer content omitted for brevity -->
+        </model-viewer>
+
+        <!-- Content for the first product -->
+        <div class="content">
+            <h2>KM White Kitchen Cabinet</h2>
+            <h2>$999.99</h2>
+            <p>Explore our custom kitchen cabinet solutions and find the perfect design for your home.</p>
         </div>
-        <button slot="ar-button" id="ar-button">
-            View in your space
-        </button>
-        <div id="ar-prompt">
-            <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+
+    <!-- Container for the second product -->
+    <div class="box">
+        <model-viewer src="Kitchen Cabinet Brown Model Only.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="0.44" exposure="0.66" shadow-softness="0.74">
+            <!-- Model-viewer content omitted for brevity -->
+        </model-viewer>
+
+        <!-- Content for the second product -->
+        <div class="content">
+            <h2>KM Natural Wood Kitchen Cabinet</h2>
+            <h2>$849.50</h2>
+            <p>Discover our natural wood kitchen that can be customized to fit your space and style. Interact with the model and imagine the possibilities in your kitchen.</p>
         </div>
-    </model-viewer>
-          
+    </div>
+
 </div>
 
 
