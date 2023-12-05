@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column; /* Stack .box divs vertically */
+        }
+        .box {
+            display: flex;
+            align-items: center; /* Vertically center align the items */
+            margin-bottom: 20px; /* Add some space between the products */
+        }
+
+        model-viewer {
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+          <ul class="nav-menu">
+             <li><a href="index.html">Home</a></li>
+              <li><a href="custom.html">Custom Kitchen Cabinet</a></li>
+              <li><a href="kitchen-counter-top.html">Kitchen Countertops</a></li>
+              <li><a href="high-chair.html">Kitchen High Chair</a></li>
+          </ul>
+      </nav>
+  </header>
+
+<!-- Container for the first product -->
+<div class="container">
+
+    <div class="box">
+        <model-viewer src="highchair.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1" min-camera-orbit="auto 0deg 287.7m" min-field-of-view="30deg" max-camera-orbit="auto 180deg auto" auto-rotate exposure="0.3">
+            <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+            </div>
+            <button slot="ar-button" id="ar-button">
+                View in your space
+            </button>
+            <div id="ar-prompt">
+                <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+            </div>
+        </model-viewer>
+        
+
+        <!-- Content for the first product -->
+        <div class="content">
+            <h2>Black Counter Height Chair</h2>
+            <h2>$149.50</h2>
+            <p>The bar stools package include all the accessories , High-strength packaging protects all accessories from damage, barstools every screw is carefully crafted. Whether sidled up to the kitchen island or grouped around the home bar, these bar stools always makes the perfect partner. Bar stools swivel stool bar chairs.</p>
+            <h2>ORDER NOW</h2>
+        </div>
+    </div>
+
+    <!-- Container for the second product -->
+    <div class="box">
+        <model-viewer src="highchairgreen.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1.44" exposure="0.83" auto-rotate min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 180deg auto">
+            <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+            </div>
+            <button slot="ar-button" id="ar-button">
+                View in your space
+            </button>
+            <div id="ar-prompt">
+                <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+            </div>
+        </model-viewer>
+        
+
+        <!-- Content for the second product -->
+        <div class="content">
+            <h2>Green Counter Height Chair</h2>
+            <h2>$149.50</h2>
+            <p> Ideal stool chair for the bar, pub, cafe, restaurant, kitchen island, bedroom, dining room, office and so on. Eye-catching pieces of furniture that make your space more modern and elegant.</p>
+            <h2>ORDER NOW</h2>
+        </div>
+    </div>
+
+</div>
+
+
+<footer>
+    <p>&copy; Kitchens 2023</p>
+</footer>
+
+</body>
+
+</html>
+    
